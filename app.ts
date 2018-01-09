@@ -1,8 +1,7 @@
+let nombre ="Hugo";
+let apellido="Bojorquez";
+let edad=31;
 
-let mensaje ="hola";
+let texto = `Hola, ${nombre} ${apellido} ${edad}`;
 
-if(true){
-  let mensaje="Adios";
-}
-
-console.log(mensaje);
+console.log(texto);

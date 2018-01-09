@@ -1,7 +1,7 @@
 "use strict";
-var mensaje = "hola";
-if (true) {
-    var mensaje_1 = "Adios";
-}
-console.log(mensaje);
+var nombre = "Hugo";
+var apellido = "Bojorquez";
+var edad = 31;
+var texto = "Hola, " + nombre + " " + apellido + " " + edad;
+console.log(texto);
 //# sourceMappingURL=app.js.map
