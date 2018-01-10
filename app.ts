@@ -1,7 +1,15 @@
-let nombre ="Hugo";
-let apellido="Bojorquez";
-let edad=31;
+function activar( quien:string, objeto:string ="batiseñal", momento?:string){
 
-let texto = `Hola, ${nombre} ${apellido} ${edad}`;
+  let mensaje:string;
+  if(momento)
+  {
+    mensaje = `${ quien } activó la ${ objeto } en la ${ momento }`;
+  }else{
+    mensaje = `${ quien } activó la ${ objeto }`;
+  }
 
-console.log(texto);
+  console.log(mensaje);
+}
+
+
+activar("Gordon", "batiseñal", "tarde");

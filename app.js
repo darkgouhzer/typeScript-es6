@@ -1,7 +1,14 @@
 "use strict";
-var nombre = "Hugo";
-var apellido = "Bojorquez";
-var edad = 31;
-var texto = "Hola, " + nombre + " " + apellido + " " + edad;
-console.log(texto);
+function activar(quien, objeto, momento) {
+    if (objeto === void 0) { objeto = "batiseñal"; }
+    var mensaje;
+    if (momento) {
+        mensaje = quien + " activ\u00F3 la " + objeto + " en la " + momento;
+    }
+    else {
+        mensaje = quien + " activ\u00F3 la " + objeto;
+    }
+    console.log(mensaje);
+}
+activar("Gordon", "batiseñal", "tarde");
 //# sourceMappingURL=app.js.map
