@@ -1,21 +1,24 @@
 
 
-// let avenger = {
-//   nombre:"Steve",
-//   clave:"Capitan America",
-//   poder: "Droga"
-// }
-//
-// let { nombre, clave, poder } = avenger;
-//
-// // let nombre =avenger.nombre;
-// // let clave = avenger.clave;
-// // let poder = avenger.poder;
-//
-// console.log(nombre, clave, poder);
+let prom1 = new Promise( function( resolve, reject ){
+  setTimeout( ()=> {
+    console.log("Promesa terminada");
+    //Termina bien
+    resolve();
 
-let avengers:string[] = ["Thor", "Steve", "Tony"];
+    //TErmina mal
+    //reject()
 
-let [, , ironman] = avengers;
+  }, 1500)
+} );
 
-console.log( ironman)
+console.log("Paso 1");
+prom1.then(function(){
+  console.log("Ejecutarme cuando se termine bien!");
+}),
+function()
+{
+  console.error("Ejecutar si todo sale mal");
+}
+
+console.log("Paso 2");

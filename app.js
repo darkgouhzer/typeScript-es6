@@ -1,18 +1,19 @@
 "use strict";
-// let avenger = {
-//   nombre:"Steve",
-//   clave:"Capitan America",
-//   poder: "Droga"
-// }
-//
-// let { nombre, clave, poder } = avenger;
-//
-// // let nombre =avenger.nombre;
-// // let clave = avenger.clave;
-// // let poder = avenger.poder;
-//
-// console.log(nombre, clave, poder);
-var avengers = ["Thor", "Steve", "Tony"];
-var ironman = avengers[2];
-console.log(ironman);
+var prom1 = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        console.log("Promesa terminada");
+        //Termina bien
+        resolve();
+        //TErmina mal
+        //reject()
+    }, 1500);
+});
+console.log("Paso 1");
+prom1.then(function () {
+    console.log("Ejecutarme cuando se termine bien!");
+}),
+    function () {
+        console.error("Ejecutar si todo sale mal");
+    };
+console.log("Paso 2");
 //# sourceMappingURL=app.js.map
